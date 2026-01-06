@@ -1,4 +1,4 @@
-Calculadora-Cientifica 🎹
+Calculadora-Cientifica 🧮 
 
 Esta es una calculadora desarollada con html , css y javascript , que permite hacer operaciones matematica basicas y tambien operaciones mas avanzadas tales como: raiz cuadradas , raiz cubica , seno , coseno , tangente porcentajes , entre otros
 
