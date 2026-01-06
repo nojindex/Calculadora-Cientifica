@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="hoja.css">
+    <link rel="stylesheet" href="conver.css">
+</head>
+<body onload="init()">
+
+
+  <table  class="calculadora">
+    <tr>
+        <td colspan="4">
+            <span id="resultado">
+          </span>
+        </td>
+    </tr>
+    <p id="re"></p>
+
+        <tr>
+            <td><button id="reset">C</button></td>
+            <td> <button id="nueve">9</button></td>
+            <td><button id="ocho">8</button></td>
+            <td><button id="suma">+</button></td>
+            <td><button id="absoluto">|x|</button></td>
+            <td><button id="e">e</button></td>
+            <td><button id="exponente">^</button></td>
+            <td><button id="cos">cos</button></td>
+            <td><button id="cosecante">cosh(x)</button></td>
+            <td><button id="acosh">acosh(x)</button></td>
+        </tr>
+        <tr>
+            <td><button id="siete">7</button></td>
+            <td><button id="seis">6</button></td>
+            <td><button id="cinco">5</button></td>
+            <td><button id="multiplicacion">*</button></td>
+            <td><button id="PI">π</button></td>
+            <td><button id="raiz">√</button></td>
+            <td><button id="natural">ln</button></td>
+            <td><button id="tan">tan</button></td>
+            <td><button id="Secante">sinh(x)</button></td>
+            <td><button id="atanh">atanh(x)</button></td>
+
+            
+        </tr>
+        <tr>
+            <td><button id="cuadro">4</button></td>
+            <td><button id="tres">3</button></td>
+            <td><button id="dos">2</button></td>
+            <td><button id="resta">-</button></td>
+            <td><button id="porcentaje">%</button></td>
+            <td><button id="factorial">!</button></td>
+            <td><button id="comunes">log</button></td>
+            <td><button id="sin">sen </button></td>
+            <td><button id="cotangente">Tanh(x)</button></td>
+           <td><button id="asinh">asinh(x)</button></td>
+             
+        </tr>
+        <tr>
+            <td><button  id="igual">=</button></td>
+            <td><button id="uno">1</button></td>
+            <td><button id="cero">0</button></td>
+            <td><button id="division">/</button></td>
+            <td><button id="punto">.</button></td>
+            <td><button id="rad">rad</button></td>
+            <td><button id="cubica">∛</button></td>
+            
+          
+            <td><button id="hp">
+                FH
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-triangle-half" viewBox="0 0 16 16">
+                    <path d="M8.065 2.016A.13.13 0 0 0 8.002 2v11.983l6.856.017a.12.12 0 0 0 .066-.017.162.162 0 0 0 .054-.06.176.176 0 0 0-.002-.183L8.12 2.073a.146.146 0 0 0-.054-.057zm-1.043-.45a1.13 1.13 0 0 1 1.96 0l6.856 11.667c.458.778-.091 1.767-.98 1.767H1.146c-.889 0-1.437-.99-.98-1.767L7.022 1.566z"/>
+                  </svg>
+            </button>
+        </td>
+        <td>
+            <button class="last" onclick="openModal()" style="width:auto;"> 
+               
+                <svg xmlns="http://www.w3.org/2000/svg" width="171" height="60" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+                  </svg>
+
+            </button>
+            
+        </td>
+            
+            <td>
+                <button id="borrar">
+                <img src="borrar.png" width="45px">
+                </button>
+            </td>
+           
+        </tr>  
+    </table>
+
+    <div id="id01" class="modal">
+        <span onclick="closeModal()" class="close" title="Close Modal">&times;</span>
+        <div class="modal-content">
+
+            <div class="dropdown-content">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'all')">All Products</button>
+                    <button class="tablinks" onclick="openCity(event, 'London')" >Area</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')" >Temperature</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')" >Length</button>
+                    <button class="tablinks" onclick="openCity(event, 'H')">Historial
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+                        <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5V5.6z"/>
+                        <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z"/>
+                    </svg>
+                    <button class="tablinks" onclick="openCity(event,'equations')">Ecuaciones Cuadraticas</button>
+                </div>
+            </div>   
+
+            
+        </div>
+
+
+        <!--EQUATIONS CUADRATICS--->
+        <div class="modal-content ">
+            <div class="containere tabcontent equations">
+                <h1>Ecuaciones Cuadraticas</h1>
+                <label for="a">Enter coeficiente a:</label>
+                <input type="text" id="a" placeholder="Enter a">
+                
+                <label for="b">Enter coefieciente  b:</label>
+                <input type="text" id="b" placeholder="Enter b">
+                
+                <label for="c">Enter coeficiente c:</label>
+                <input type="text" id="c" placeholder="Enter c">
+                
+                <button class="x" onclick="solveQuadratic()">Solve</button>
+                <button  onclick="resettque()" id="resett">Reset</button>
+                
+                <div id="resultt"></div>
+                <div id="resulttx2"></div>
+                <div id="invalido"></div>
+
+              
+        </div>
+
+        <!--finish-->
+
+        <div class="modal-content ">
+            <div class="converter tabcontent  Paris">
+                <h1>Temperature Converter</h1>
+                <input type="number" id="inputValue" placeholder="Enter value">
+                <select id="fromUnit" >
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+                <span>to</span>
+                <select id="toUnit">
+                  
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">kelvin</option>
+                </select>
+                <button id="convertButton" onclick="convertTemperature()">Convert</button>
+                <button id="resett" onclick="resetForm()">Reset</button>
+                <p id="result"></p>
+            </div>
+        </div>
+
+        <div class="modal-content ">
+            <div class="converter tabcontent Tokyo">
+                <h1>Length Converter</h1>
+                <input type="number" id="inputValue" placeholder="Enter value">
+                <select id="fromUnit" >
+                    <option value="celsius">inches</option>
+                    <option value="fahrenheit">feet</option>
+                    <option value="kelvin">meters</option>
+                </select>
+                <span>to</span>
+                <select id="toUnit">
+                  
+                    <option value="celsius">inches</option>
+                    <option value="fahrenheit">feet</option>
+                    <option value="kelvin">meters</option>
+                </select>
+                <button id="convertButton" onclick="convertTemperature()">Convert</button>
+                <button id="resett" onclick="resetForm()">Reset</button>
+                <p id="result"></p>
+            </div>
+        </div>
+
+
+        <div class="modal-content ">
+            <div class="converter tabcontent London">
+                <h1>Area Converter</h1>
+                <input type="number" id="inputValue" placeholder="Enter value">
+                <select id="fromUnit" >
+                    <option value="celsius">cm2</option>
+                    <option value="fahrenheit">ft2</option>
+                    <option value="kelvin">m2</option>
+                </select>
+                <span>to</span>
+                <select id="toUnit">
+                  
+                    <option value="celsius">cm2</option>
+                    <option value="fahrenheit">ft2</option>
+                    <option value="kelvin">m2</option>
+                </select>
+                <button id="convertButton" onclick="convertTemperature()">Convert</button>
+                <button id="resett" onclick="resetForm()">Reset</button>
+                <p id="result"></p>
+            </div>
+        </div>
+
+        <div class="modal-content ">
+            <div class="converter tabcontent H">
+                <h1>Historial de Navegación calculadora
+                    
+                </h1>
+                <ul id="operaciones-list"></ul>
+
+                <button id="resettdos">Eliminate all History
+                    
+                </button>
+                  
+            </div>
+        </div>
+
+
+        
+    </div>
+
+
+   
+
+      
+    <script src="script.js"></script>
+    
+</body>
+</html>

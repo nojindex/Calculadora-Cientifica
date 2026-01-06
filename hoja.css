@@ -1,0 +1,196 @@
+body{
+    height: 10px;
+background-color:  #000000;
+}
+.calculadora{
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    width: 850px;
+    height: 95px;
+    margin-top:350px;
+    padding: 10px;
+    border-collapse: collapse;
+    border-radius: 30px;
+}
+
+
+
+#reset{
+    color: rgb(245, 10, 10);
+    font-size: 50px;
+}
+#reset:hover{
+    background-color:rgb(0, 0, 0);
+    background-color: rgb(163, 21, 2);
+    color: white;
+    
+}
+#reset:active{
+    font-size: 55px;
+}
+#igual{
+    color: white;
+    font-size: 50px;
+    background-color: green;
+}
+#igual:hover{
+    background-color:black;
+    background-color:rgb(16, 236, 53);
+    color: white;
+}
+#igual:active{
+    font-size: 55px;
+}
+#suma ,#resta ,#multiplicacion ,#division {
+    color: rgb(82, 202, 66);
+    font-size: 50px;
+}
+
+#suma:active{
+    font-size: 65px;
+}
+#resta:active{
+    font-size: 65px;
+}
+#multiplicacion:active{
+    font-size: 65px;
+}
+#division:active{
+    font-size: 65px;
+}
+
+
+td button{
+    display:block;
+    width: 187px;
+    height:110px;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #272222;
+    color: white;
+    font-family: "Arial", sans-serif;
+    border-collapse: collapse;
+    border: 1px solid white;
+   
+}
+
+td button:hover{
+    transition: all 0.2s ease-in-out;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 45px;
+    filter: drop-shadow(0 0 10px rgb(255, 255, 255))
+}
+
+
+td button:active{
+    transition: all 0.1s ease-in-out;
+    background-color: rgb(92, 2, 92);
+}
+#resultado{
+    display: block;
+    text-align: right;
+    font-size: 45px;
+    margin-bottom: 3px;
+    width: 245%;
+    padding:10px;
+    height: 90px;
+    line-height: 100px;
+    background-color: rgb(0, 0, 0);
+    border-radius:1px; 
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+}
+
+#borrar{
+    font-size: 35px;
+    background-color: rgb(255, 255, 255);
+}
+
+#borrar:hover{
+    transition: all ease 0.1s;
+    background-color: rgba(184, 184, 184, 0.8);
+}
+#borrar:active{
+    font-size: 55px;
+}
+
+img{
+    margin-top: 5px;
+    margin-right:5px;
+}
+
+
+
+/*comnvertidor de unidades */
+
+
+
+
+/*----------------------------------------------------------------*/
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #000000;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    border-radius: 10px;
+    background-color: skyblue;
+    margin: 2% auto 2% ; /* 5% from the top, 15% from the bottom and centered */
+    width: 80%; /* Could be more or less, depending on screen size */
+    box-shadow:  20px 20px 20px  rgba(10, 10, 10, 0.9);
+  }
+
+ 
+    /* The Close Button (x) */
+    .close {
+        position: absolute;
+        right: 45px;
+        top: 5px;
+        font-size: 65px;
+        font-weight: bold;
+        color: #f1f1f1;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #f50a0a;
+        cursor: pointer;
+      }  
+      
+      
+
+
+      /*estilo */
+      .containero{
+        color: black;
+        font-size:25px;
+        text-align: center;
+        padding: 100px;
+      }
+    
+      .containero  a{
+        color: rgb(250, 7, 7);
+        text-decoration:  none;
+      }
+    
+      .containero a:hover{
+        transition: all 0.1s ease-in-out;
+        opacity: 0.5;
+      }
+     
+
+
+    
